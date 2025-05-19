@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+<link rel="icon" href="./img/Favicon.png" type="image/x-icon">
 <body>
     <header class="header">
         <div class="container">
@@ -32,8 +33,8 @@
         <section id="inicio" class="hero">
             <div class="hero-overlay"></div>
             <div class="container">
-                <h1>Soluciones Eléctricas Profesionales</h1> 
-                <p>Instalaciones seguras, eficientes y con garantía de calidad</p>
+                <h1><span class="hero-title">Soluciones Eléctricas Profesionales</span></h1> 
+                <p class="hero-subtitle">Instalaciones seguras, eficientes y con garantía de calidad</p>
                 <a href="#contacto" class="btn">Solicitar Presupuesto</a>
             </div>
         </section>
@@ -80,12 +81,7 @@
                     </ul>
                 </div>
                 <div class="about-image">
-                    <img src="./img/final.jpg" 
-                    alt="Equipo de Instalaciones Eléctricas Concepción"
-                    class="professional-vivid-image"
-                    loading="lazy"
-                    width="600"
-                    height="400">
+                    <img src="./img/final.jpg" alt="Equipo de Instalaciones Eléctricas Concepción" class="professional-vivid-image" loading="lazy" width="600" height="400">
                 </div>
             </div>
         </section>
@@ -119,7 +115,6 @@
             </div>
         </section>
 
-        <!-- Modals for projects -->
         <div id="commercial-modal" class="modal">
             <div class="modal-content">
                 <span class="close-modal">&times;</span>
@@ -213,7 +208,8 @@
                             <a href="https://wa.me/34631961614" target="_blank"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
-                    <form class="contact-form" action="https://formspree.io/f/electricosconcepcion@gmail.com" method="POST">
+                    <form class="contact-form" action="https://formspree.io/f/manokodj" method="POST">
+                        <input type="text" name="_gotcha" style="display:none">
                         <div class="form-group">
                             <input type="text" name="nombre" placeholder="Nombre" required>
                         </div>
@@ -236,8 +232,6 @@
                             <textarea name="mensaje" placeholder="Mensaje" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="btn">Enviar Mensaje</button>
-                        
-                        <!-- Mensaje de estado del formulario -->
                         <div id="form-status" style="display: none; margin-top: 15px; padding: 10px; background: #f0f8ff; border-radius: 5px;"></div>
                     </form>
                 </div>
@@ -269,37 +263,53 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Instalaciones Eléctricas Concepción. Todos los derechos reservados.</p>
+                <p>&copy; 2010 Instalaciones Eléctricas Concepción. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <script src="./script.js"></script>
     
-    <!-- Script para el formulario -->
     <script>
         const form = document.querySelector(".contact-form");
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
             const statusDiv = document.getElementById("form-status");
+            const submitBtn = form.querySelector("button[type='submit']");
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            submitBtn.disabled = true;
+            
             statusDiv.style.display = "block";
-            statusDiv.textContent = "Enviando...";
+            statusDiv.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando mensaje...';
+            statusDiv.style.background = "#f0f8ff";
+            statusDiv.style.color = "#000";
             
             try {
                 const response = await fetch(form.action, {
                     method: "POST",
                     body: new FormData(form),
-                    headers: { "Accept": "application/json" }
+                    headers: {
+                        'Accept': 'application/json'
+                    }
                 });
                 
                 if (response.ok) {
-                    statusDiv.textContent = "✅ Mensaje enviado. ¡Gracias por contactarnos!";
+                    statusDiv.innerHTML = '<i class="fas fa-check-circle"></i> ¡Mensaje enviado con éxito!<br>Te responderemos pronto.';
+                    statusDiv.style.background = "#e6f7ee";
+                    statusDiv.style.color = "#2e7d32";
                     form.reset();
                 } else {
-                    statusDiv.textContent = "❌ Error al enviar. Por favor, inténtalo de nuevo.";
+                    throw new Error("Error en la respuesta del servidor");
                 }
             } catch (error) {
-                statusDiv.textContent = "❌ Error de conexión. Verifica tu red.";
+                statusDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> Error al enviar. Por favor, inténtalo de nuevo más tarde.';
+                statusDiv.style.background = "#ffebee";
+                statusDiv.style.color = "#c62828";
+                console.error("Error:", error);
+            } finally {
+                submitBtn.innerHTML = 'Enviar Mensaje';
+                submitBtn.disabled = false;
             }
         });
     </script>
