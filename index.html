@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalaciones Eléctricas Concepción | Electricista Profesional</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <img src="./img/logo.jpg" alt="Instalaciones Eléctricas Concepción" class="logo">
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <h1>Soluciones Eléctricas Profesionales</h1> 
+                <p>Instalaciones seguras, eficientes y con garantía de calidad</p>
+                <a href="#contacto" class="btn">Solicitar Presupuesto</a>
+            </div>
+        </section>
+
+        <section id="servicios" class="services">
+            <div class="container">
+                <h2>Nuestros Servicios</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Instalaciones Eléctricas</h3>
+                        <p>Instalaciones completas para viviendas, locales comerciales e industriales.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-solar-panel"></i>
+                        <h3>Energías Renovables</h3>
+                        <p>Sistemas fotovoltaicos y soluciones energéticas sostenibles.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-tools"></i>
+                        <h3>Mantenimiento</h3>
+                        <p>Mantenimiento preventivo y correctivo de instalaciones eléctricas.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-home"></i>
+                        <h3>Automatización</h3>
+                        <p>Sistemas domóticos para viviendas y edificios inteligentes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="nosotros" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <h2>Sobre Nosotros</h2>
+                    <p>Instalaciones Eléctricas Concepción es una empresa con más de 15 años de experiencia en el sector eléctrico. Nuestro equipo de profesionales altamente cualificados garantiza soluciones eficientes y seguras para todos nuestros clientes.</p>
+                    <p>Nos caracterizamos por nuestro trato cercano, profesionalismo y compromiso con la calidad en cada proyecto que emprendemos.</p>
+                    <ul class="about-features">
+                        <li><i class="fas fa-check"></i> Profesionales certificados</li>
+                        <li><i class="fas fa-check"></i> Materiales de primera calidad</li>
+                        <li><i class="fas fa-check"></i> Garantía en todos nuestros trabajos</li>
+                        <li><i class="fas fa-check"></i> Presupuestos sin compromiso</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="./img/final.jpg" 
+                    alt="Equipo de Instalaciones Eléctricas Concepción"
+                    class="professional-vivid-image"
+                    loading="lazy"
+                    width="600"
+                    height="400">
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="projects">
+            <div class="container">
+                <h2>Proyectos Recientes</h2>
+                <div class="projects-grid">
+                    <div class="project-card" data-modal="commercial-modal">
+                        <div class="project-image img1"></div>
+                        <div class="project-info">
+                            <h3>Instalación Comercial</h3>
+                            <p>Completa instalación eléctrica para local comercial en centro de la ciudad.</p>
+                        </div>
+                    </div>
+                    <div class="project-card" data-modal="house-modal">
+                        <div class="project-image img2"></div>
+                        <div class="project-info">
+                            <h3>Vivienda Unifamiliar</h3>
+                            <p>Instalación eléctrica y sistema domótico para vivienda de lujo.</p>
+                        </div>
+                    </div>
+                    <div class="project-card" data-modal="industrial-modal">
+                        <div class="project-image img3"></div>
+                        <div class="project-info">
+                            <h3>Planta Industrial</h3>
+                            <p>Mantenimiento y ampliación de instalación eléctrica industrial.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modals for projects -->
+        <div id="commercial-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Instalación Comercial</h2>
+                <div class="modal-gallery">
+                    <div class="gallery-item active">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Instalación Comercial 1">
+                        <div class="gallery-description">
+                            <p>Instalación eléctrica completa para local comercial en el centro de la ciudad.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Instalación Comercial 2">
+                        <div class="gallery-description">
+                            <p>Detalle del cuadro eléctrico principal con protecciones diferenciales.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-controls">
+                        <button class="gallery-prev"><i class="fas fa-chevron-left"></i></button>
+                        <div class="gallery-dots"></div>
+                        <button class="gallery-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="house-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Vivienda Unifamiliar</h2>
+                <div class="modal-gallery">
+                    <div class="gallery-item active">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1349&q=80" alt="Vivienda Unifamiliar 1">
+                        <div class="gallery-description">
+                            <p>Instalación eléctrica y sistema domótico para vivienda de lujo.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Vivienda Unifamiliar 2">
+                        <div class="gallery-description">
+                            <p>Sistema de automatización para control de iluminación y climatización.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-controls">
+                        <button class="gallery-prev"><i class="fas fa-chevron-left"></i></button>
+                        <div class="gallery-dots"></div>
+                        <button class="gallery-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="industrial-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Planta Industrial</h2>
+                <div class="modal-gallery">
+                    <div class="gallery-item active">
+                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80" alt="Planta Industrial 1">
+                        <div class="gallery-description">
+                            <p>Mantenimiento y ampliación de instalación eléctrica industrial.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Planta Industrial 2">
+                        <div class="gallery-description">
+                            <p>Cuadros eléctricos con protecciones para maquinaria pesada.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-controls">
+                        <button class="gallery-prev"><i class="fas fa-chevron-left"></i></button>
+                        <div class="gallery-dots"></div>
+                        <button class="gallery-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="contacto" class="contact">
+            <div class="container">
+                <h2>Contacto</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Información de Contacto</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Dirección: Avenida Garabolos n°7 - LUGO</p>
+                        <p><i class="fas fa-phone"></i> Teléfono: +34 631 96 16 14</p>
+                        <p><i class="fas fa-envelope"></i> Email: electricosconcepcion@gmail.com</p>
+                        <p><i class="fas fa-clock"></i> Horario: Lunes a Viernes 9:00 - 18:00</p>
+                        
+                        <div class="social-links">
+                            <a href="https://wa.me/34631961614" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form" action="https://formspree.io/f/electricosconcepcion@gmail.com" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="nombre" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="telefono" placeholder="Teléfono">
+                        </div>
+                        <div class="form-group">
+                            <select name="servicio" required>
+                                <option value="" disabled selected>Seleccione un servicio</option>
+                                <option value="instalacion">Instalación Eléctrica</option>
+                                <option value="mantenimiento">Mantenimiento</option>
+                                <option value="renovable">Energías Renovables</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="mensaje" placeholder="Mensaje" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar Mensaje</button>
+                        
+                        <!-- Mensaje de estado del formulario -->
+                        <div id="form-status" style="display: none; margin-top: 15px; padding: 10px; background: #f0f8ff; border-radius: 5px;"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/logo.jpg" alt="Instalaciones Eléctricas Concepción" class="logo">
+                </div>
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Avenida Garabolos n°7 - LUGO</p>
+                    <p><i class="fas fa-phone"></i> +34 631 96 16 14</p>
+                    <p><i class="fas fa-envelope"></i> electricosconcepcion@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Instalaciones Eléctricas Concepción. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+    
+    <!-- Script para el formulario -->
+    <script>
+        const form = document.querySelector(".contact-form");
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const statusDiv = document.getElementById("form-status");
+            statusDiv.style.display = "block";
+            statusDiv.textContent = "Enviando...";
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(form),
+                    headers: { "Accept": "application/json" }
+                });
+                
+                if (response.ok) {
+                    statusDiv.textContent = "✅ Mensaje enviado. ¡Gracias por contactarnos!";
+                    form.reset();
+                } else {
+                    statusDiv.textContent = "❌ Error al enviar. Por favor, inténtalo de nuevo.";
+                }
+            } catch (error) {
+                statusDiv.textContent = "❌ Error de conexión. Verifica tu red.";
+            }
+        });
+    </script>
+</body>
+</html>
